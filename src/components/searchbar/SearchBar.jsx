@@ -13,6 +13,7 @@ const handleClick = event =>{
    props.onSearch(id);
    setId("");
 }
+
    return (//si quiero pasar id 
       <div>
          <input
@@ -23,6 +24,7 @@ const handleClick = event =>{
             value={id}
          />
          <button onClick={handleClick}>Agregar</button>
+        
       </div>
    );
 }

@@ -1,7 +1,7 @@
-import App from "../../App";
+import { Link } from "react-router-dom";
 
-export default function Card(props) { //props es un objeto
-   //props = {id:..., name:...,onclose:()=>{} }
+export default function Card(props) { 
+  
    return (
       <div
          style={{
@@ -19,7 +19,10 @@ export default function Card(props) { //props es un objeto
          <h4>Specie: {props.species}</h4>
          <h4>Gender: {props.gender}</h4>
          <h4>Origin: {props.origin}</h4>
-         <img src={props.image} alt={props.name} />
+         <Link to={`/detail/${props.id}`}>
+            <img src={props.image} alt={props.name} />
+         </Link>
+
       </div >
    );
 }
