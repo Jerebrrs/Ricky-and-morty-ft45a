@@ -8,6 +8,9 @@ import About from './components/about/About.jsx';
 import Detail from './components/datail/Detail.jsx';
 import NotFound from './components/notFound/NotFound.jsx';
 import Form from './components/form/Form.jsx';
+import Favorites from './components/favorites/Favorites.jsx';
+import { useDispatch } from 'react-redux';
+import { removeFav } from './redux/actions.js';
 
 
 
@@ -36,9 +39,12 @@ function App() {
          }
       );
    }
+   const dispatch = useDispatch();
+
    // characters [id:1 ]
-   const onClose = id => {
+   const onClose = (id) => {
       setCharacters(characters.filter(char => char.id !== Number(id)));
+      dispatch(removeFav(id));
    }
    //*login
 
@@ -59,7 +65,8 @@ function App() {
       setAccess(false);
    }
    useEffect(() => {
-      !access && navigate('/');
+      !access && navigate('/home');
+      //  !access && navigate('/');
    }, [access]);
 
 
@@ -84,6 +91,11 @@ function App() {
             <Route
                path='/detail/:id'
                element={<Detail />}
+            />
+            <Route
+               path='/favorites'
+               element={<Favorites onClose={onClose} />}
+
             />
             <Route
                path='*'
