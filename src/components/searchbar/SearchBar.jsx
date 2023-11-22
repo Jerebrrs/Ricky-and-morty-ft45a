@@ -8,12 +8,15 @@ export default function SearchBar(props) {
       setId(value); /// para que siempre qiede limpio
 
    }
-const handleClick = event =>{
-   event.preventDefault();
-   props.onSearch(id);
-   setId("");
-}
-
+   const handleClick = event => {
+      event.preventDefault();
+      props.onSearch(id);
+      setId("");
+   }
+   const handleRandom = () => {
+      const randomNumber = Math.floor(Math.random() * 826) + 1;
+      props.onSearch(randomNumber);
+   };
    return (//si quiero pasar id 
       <div>
          <input
@@ -24,7 +27,8 @@ const handleClick = event =>{
             value={id}
          />
          <button onClick={handleClick}>Agregar</button>
-        
+         <button onClick={handleRandom}>Random</button>
+         <hr />
       </div>
    );
 }
