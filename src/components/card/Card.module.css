@@ -1,15 +1,22 @@
 .container {
-    background-color: rgb(189, 145, 125);
+    background-color: rgb(194, 133, 105);
     margin: 20px;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 10 px black;
-    color: black;
+    border-radius: 20px;
+    box-shadow: 0 10px 10 px #f3f1f1;
+    color: white;
+    width: 300px;
+    height: auto;
 
     &:hover {
-        box-shadow: 0 10px 10 px white;
+        box-shadow: 0 0 0.5rem #ff4fe8, 0 0 0.5rem #ff4fe8,
+            0 0 5rem #ff4fe8;
+        transition: 2s;
+        cursor: pointer;
+        background-color: black;
     }
 }
+
 
 .container img {
     width: 130px;
@@ -20,3 +27,10 @@
 .container button {
     background-color: rgb(34, 23, 19);
 }
+
+/* .container:hover {
+    box-shadow: 0 0 0.5rem #ff4fe8, 0 0 0.5rem #ff4fe8,
+        0 5rem #ff4fe8;
+    transition: 2s;
+    cursor: pointer;
+} */

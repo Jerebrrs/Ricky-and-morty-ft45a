@@ -65,7 +65,7 @@ function App() {
       setAccess(false);
    }
    useEffect(() => {
-      !access && navigate('/home');
+      !access && navigate('/');
       //  !access && navigate('/');
    }, [access]);
 
