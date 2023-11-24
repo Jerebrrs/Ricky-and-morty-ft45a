@@ -1,0 +1,22 @@
+.container {
+    background-color: rgb(189, 145, 125);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 10 px black;
+    color: black;
+
+    &:hover {
+        box-shadow: 0 10px 10 px white;
+    }
+}
+
+.container img {
+    width: 130px;
+    box-shadow: 0 10px 10 px black;
+    border-radius: 10px;
+}
+
+.container button {
+    background-color: rgb(34, 23, 19);
+}

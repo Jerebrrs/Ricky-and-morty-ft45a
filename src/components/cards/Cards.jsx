@@ -2,13 +2,16 @@ import Card from '../card/Card.jsx';
 
 export default function Cards({ characters, onClose }) {// como objeto asi lo guarrdo
    // console.log(characters);
+   const cardsConteiner = {
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "space-evenly",
+   }
+
+
    return (//mapeamos character
       <div
-         style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-evenly",
-         }}
+         style={cardsConteiner}
       >
          {
             !characters.length

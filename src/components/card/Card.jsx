@@ -1,3 +1,4 @@
+import styles from "./Card.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addFAv, removeFav } from "../../redux/actions";
@@ -28,14 +29,8 @@ export default function Card(props) {
 
 
    return (
-      <div
-         style={{
-            backgroundColor: "greenyellow",
-            margin: "20px",
-            padding: "20px",
-            borderRadius: "15px",
-         }}
 
+      <div className={styles.container}
       >
          {
             isFav ? (
