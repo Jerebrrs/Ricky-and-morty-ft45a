@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import styles from "./Detail.modules.css"
 
 
 const URL = "https://rym2.up.railway.app/api/character";
@@ -10,7 +11,7 @@ export default function Detail(props) {
     const { id } = useParams();
     const [character, setCharacters] = useState({});
     useEffect(() => {
-        axios(`${URL}/${id}?key=${API_KEY}`).then(
+        axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
             ({ data }) => {
                 if (data.name) {
                     setCharacters(data);
@@ -23,7 +24,13 @@ export default function Detail(props) {
     }, [id]);
 
     return (
-        <div>
+
+        <div style={{
+            backgroundColor: "coral",
+            padding: "20px",
+            borderRadius: "20px"
+        }} >
+
             <h1>Detail</h1>
             <h2>{character.name}</h2>
             <img src={character.image} alt={character.name}></img>

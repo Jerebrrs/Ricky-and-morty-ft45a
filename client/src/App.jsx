@@ -29,15 +29,16 @@ function App() {
       if (characterId.length) {
          return alert(`El personaje con Id ${characterId[0].name} ya existe`)
       }
-      axios(`${URL}/${id}?key=${API_KEY}`).then(
-         ({ data }) => {
-            if (data.name) {
-               setCharacters([...characters, data]);
-            } else {
-               window.alert('¡ID debe ser un numero entre 1 y 826!');
+      axios(`http://localhost:3001/rickandmorty/character/${id}`)
+         .then(
+            ({ data }) => {
+               if (data.name) {
+                  setCharacters([...characters, data]);
+               } else {
+                  window.alert('¡ID debe ser un numero entre 1 y 826!');
+               }
             }
-         }
-      );
+         );
    }
    const dispatch = useDispatch();
 
