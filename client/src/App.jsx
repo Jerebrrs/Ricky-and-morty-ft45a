@@ -50,24 +50,28 @@ function App() {
    //*login
 
    const [access, setAccess] = useState(false);
-   const EMAIL = "ejemplo@gmail.com";
-   const PASSWORD = "123456";
 
    function login(userData) {
-      if (userData.password === PASSWORD && userData.email === EMAIL) {
-         setAccess(true);
-         navigate("/home");
-      } else {
-         alert("Credenciales incorrectas!")
-      }
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+         const { access } = data;
+         if (access) {
+            setAccess(data);
+            access && navigate('/home');
+         } else {
+            alert("Credenciales incorrectas!")
+
+         }
+      });
    }
+
    //*logaut
    function logout() {
       setAccess(false);
    }
    useEffect(() => {
       !access && navigate('/');
-      //  !access && navigate('/');
    }, [access]);
 
 
