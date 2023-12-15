@@ -34,3 +34,5 @@ export default function Cards({ characters, onClose }) {// como objeto asi lo gu
       </div>
    );
 }
+
+

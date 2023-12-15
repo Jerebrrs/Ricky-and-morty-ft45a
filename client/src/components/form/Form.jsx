@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-
+import stilos from "./formModule.css";
 import validation from "../../utils/validation";
-const banner = "https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-ruefers-deviantart-22.png";
-
+const banner = "https://c.wallhere.com/photos/24/bf/Rick_and_Morty_kendiparodim-1313759.jpg!d";
+import style from "./formModule.css";
 export default function Form(props) {
     const [userData, setUserData] = useState({
         email: "",
@@ -33,7 +33,13 @@ export default function Form(props) {
     }
 
     return (
-        <div>
+        <div
+            style={{
+                backgroundColor: "AppWorkspace",
+                padding: "20px",
+                borderRadius: "20px",
+                boxshadow: "5px 5px overscrollBehaviorBlock",
+            }}>
             <img
                 src={banner}
                 style={{ width: "300px" }}
@@ -68,6 +74,6 @@ export default function Form(props) {
                     disabled={errors.email || errors.password}
                 >Enviar</button>
             </form>
-        </div>
+        </div >
     )
 }

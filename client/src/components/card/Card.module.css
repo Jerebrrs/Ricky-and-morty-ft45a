@@ -1,19 +1,20 @@
 .container {
-    background-color: rgb(194, 133, 105);
+    background-color: rgb(83, 85, 97);
     margin: 20px;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 10px 10 px #f3f1f1;
+    box-shadow: 10px 10px 5px black;
     color: white;
     width: 300px;
     height: auto;
 
     &:hover {
-        box-shadow: 0 0 0.5rem #ff4fe8, 0 0 0.5rem #ff4fe8,
-            0 0 5rem #ff4fe8;
+        box-shadow: 0 0 0.5rem #1d3feb, 0 0 0.5rem #1b5ff1,
+            0 0 5rem #83a6e7;
+           
         transition: 2s;
         cursor: pointer;
-        background-color: black;
+        background-color: rgb(22, 59, 73);
     }
 }
 
@@ -22,10 +23,14 @@
     width: 130px;
     box-shadow: 0 10px 10 px black;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .container button {
-    background-color: rgb(34, 23, 19);
+    background-color: rgb(34, 54, 54);
+    border-radius: 10px;
+    cursor: pointer;
+    
 }
 
 /* .container:hover {

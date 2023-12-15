@@ -4,7 +4,12 @@ import SearchBar from "../searchbar/SearchBar.jsx";
 
 export default function Nav(props) {
     return (
-        <div >
+        <div style={{
+            backgroundColor: "gray",
+            padding: "10px",
+            borderRadius: "20px",
+            width: "950px"
+        }} >
             <NavLink to="/home">
                 <button>Home</button>
             </NavLink>

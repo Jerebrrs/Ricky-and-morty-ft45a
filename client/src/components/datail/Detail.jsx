@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import styles from "./Detail.modules.css"
+
 
 
 const URL = "https://rym2.up.railway.app/api/character";
@@ -26,7 +26,7 @@ export default function Detail(props) {
     return (
 
         <div style={{
-            backgroundColor: "coral",
+            backgroundColor: "gray",
             padding: "20px",
             borderRadius: "20px"
         }} >

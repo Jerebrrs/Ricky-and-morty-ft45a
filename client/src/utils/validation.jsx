@@ -18,7 +18,7 @@ export default function validation(input) {
     return errors;
 }
 
-console.log(validation({
-    email: "simon6@m.com",
-    password: "ab5c257"
-}))
+// console.log(validation({
+//     email: "ejemplo@gmail.com",
+//     password: "123456"
+// }))
